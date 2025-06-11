@@ -24,14 +24,14 @@
         .then(res => res.json())
         .then(produtos => {
             const tabela = document.getElementById('tabela-produtos');
-            produtos.foreach(p =>{
+            produtos.forEach(p =>{
                 const linha = document.createElement('tr');
                 linha.innerHTML = `
                 <td>${p.nome}</td>
                 <td>${p.quantidade}</td>
                 <td>${parseFloat(p.preco).toFixed(2)}</td>
                 `;
-                tabela.appendChild
+                tabela.appendChild(linha);
             });
         })
         .catch(err =>{
